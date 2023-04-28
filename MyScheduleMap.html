@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roam your weekend map 週末探索地圖</title>    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="styles/leaflet.css" />
+    <link rel="stylesheet" href="styles/MyScheduleMap.css">
+</head>
+
+<body>
+    <div class="container-md">
+        <h1 class="h5 pt-3 pt-sm-4">Roam your weekend map</h1>
+        <h2 class="h4">週末探索地圖</h2>
+        <p class="small">點擊活動檢視位置，google導航點擊地點連結。</p>
+        <div class="row">
+            <div class="col-sm-6">
+                <div id="map" class="rounded-4 shadow"></div>
+            </div>
+            <div class="col-sm-6">
+                <ul id="info" class="list-unstyled row gx-3"></ul>
+            </div>
+        </div>
+        <a class="btn small btn-feedback" href="https://forms.gle/h3hqeTN6b29KZS5C9" target="_blank" rel="noopener noreferrer"
+           title="前往填寫問題回報或活動推薦google表單(另開新視窗)">
+            <span class="material-symbols-outlined" aria-hidden="true">
+                feedback
+            </span>
+        </a>
+    </div>
+    
+    <script src="scripts/axios.min.js"></script>
+    <script src="scripts/leaflet.js"></script>
+    <script src="scripts/MyScheduleMap.min.js"></script>
+</body>
+</html>

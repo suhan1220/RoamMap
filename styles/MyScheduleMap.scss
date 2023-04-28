@@ -1,0 +1,111 @@
+
+@import "custom-bootstrap";
+
+body {
+    --bs-body-bg: #f0f9fb;
+
+    @media (max-width: 768px) {
+        overflow: hidden; //禁止滑動
+    }
+}
+
+#map {
+    width: 100%;
+    height: 35vh;
+    margin-bottom: 1rem;
+
+    @media (min-width: 768px) {
+        height: 80vh;
+    }
+}
+
+#info {
+    overflow: auto;
+    height: 37vh;
+    padding-right: 0.5rem;
+    overscroll-behavior: none; //可穿越
+    scrollbar-gutter: stable; //保留滾動空間
+
+    @media (min-width: 768px) {
+        height: 80vh;
+    }
+
+    &::-webkit-scrollbar {
+        width: 0.5em;
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: #e3eef1;
+        border-radius: 2rem;
+        // box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #a0c8d2;
+        border: 1px solid slategrey;
+        border-radius: 2rem;
+    }
+}
+
+@for $i from 320 through 1080 {
+    .container-md[data-height="#{$i}"] #info {
+        height: #{$i}px;
+    }
+
+    @media (min-width: 768px) {
+        .container-md[data-height="#{$i}"] #map {
+            height: #{$i}px;
+        }
+    }
+}
+
+.title {
+    color: #524742;
+    font-size: 1.725rem;
+
+    @media (max-width: 768px) {
+        font-size: 1rem;
+    }
+}
+
+.item {
+    background-color: #fff;
+}
+
+.item:hover {
+    background-color: #f8f8ec;
+}
+
+
+.info-txt {
+    margin: .5rem 0;
+
+    @media (min-width: 768px) {
+        margin: .3rem 0;
+
+    }
+}
+
+.text-mb-small {
+    font-size: 1rem;
+
+    @media (max-width: 768px) {
+        font-size: 0.8rem;
+    }
+
+    .material-symbols-outlined {
+        font-size: 1rem;
+        padding-right: 0.1rem;
+        padding-bottom: 0.15rem;
+
+        @media (max-width: 768px) {
+            font-size: 0.8rem;
+        }
+    }
+}
+
+.btn-feedback {
+    position: fixed;
+    top: 0.5rem;
+    right: 0;
+}
